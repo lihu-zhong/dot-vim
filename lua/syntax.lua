@@ -10,11 +10,11 @@ require("nvim-treesitter.configs").setup({
 -- All of these require a respective binary to be present in the PATH. Setting
 -- that up is a manual process, there's docs for each respective project.
 local lspconfig = require("lspconfig")
--- Install with node
+-- Install with node or dnf (nodejs-bash-language-server)
 lspconfig.bashls.setup({})
 -- Download a tarball from github
 lspconfig.lua_ls.setup({})
--- Download a tarball from github
+-- `rustup component add rust-analyzer`
 lspconfig.rust_analyzer.setup({})
 -- Use poetry environment
 lspconfig.pyright.setup({})
