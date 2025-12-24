@@ -1,25 +1,26 @@
 ---@diagnostic disable: undefined-global
 -- nvim-treesitter/nvim-treesitter
-require("nvim-treesitter.configs").setup({
-    highlight = { enable = true },
-    incremental_selection = { enable = true },
-    indent = { enable = true },
+require("nvim-treesitter").install({
+    "rust",
+    "python",
+    "lua",
+    "bash",
+    "yaml",
 })
 
 -- neovim/nvim-lspconfig
 -- All of these require a respective binary to be present in the PATH. Setting
 -- that up is a manual process, there's docs for each respective project.
-local lspconfig = require("lspconfig")
 -- Install with node or dnf (nodejs-bash-language-server)
-lspconfig.bashls.setup({})
+vim.lsp.enable("bashls")
 -- Download a tarball from github
-lspconfig.lua_ls.setup({})
+vim.lsp.enable("lua_ls")
 -- `rustup component add rust-analyzer`
-lspconfig.rust_analyzer.setup({})
+vim.lsp.enable("rust_analyzer")
 -- Use poetry environment
-lspconfig.pyright.setup({})
-lspconfig.ruff.setup({})
-lspconfig.tflint.setup({})
+vim.lsp.enable("pyright")
+vim.lsp.enable("ruff")
+vim.lsp.enable("tflint")
 
 -- w0rp/ale
 vim.g.ale_use_neovim_diagnostics_api = 1
