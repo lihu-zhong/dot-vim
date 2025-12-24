@@ -1,10 +1,11 @@
 ---@diagnostic disable: undefined-global
 -- nvim-treesitter/nvim-treesitter
 require("nvim-treesitter").install({
-    "rust",
-    "python",
-    "lua",
     "bash",
+    "lua",
+    "markdown",
+    "python",
+    "rust",
     "yaml",
 })
 
