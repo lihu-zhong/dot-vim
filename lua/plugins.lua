@@ -19,6 +19,7 @@ require("paq")({
     { "windwp/nvim-autopairs" },
     { "myusuf3/numbers.vim" },
     { "fladson/vim-kitty" },
+    { "lark-parser/vim-lark-syntax" },
     -- Rust tools
     { "williamboman/mason.nvim" },
     { "williamboman/mason-lspconfig.nvim" },
